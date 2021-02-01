@@ -13,10 +13,12 @@ name: Build OpenWrt
 on:
   repository_dispatch:
   workflow_dispatch:
+  watch:
+    types: started
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: ture
+        required: true
         default: 'false'
 
 env:
